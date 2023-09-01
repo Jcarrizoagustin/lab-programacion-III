@@ -1,33 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/estilos.css" />
     <title>Menu Administrador</title>
 </head>
+
 <body>
-    <header>
-        <h1> Gestión de Trabajos Finales</h1>
+    <header class="header">
+        <h1 class="titulo">Gestión de Trabajos Finales</h1>
+        <nav class="menu">
+            <div class="sub-menu">
+                <a class="sub-menu-title" href="menuUsuarioAdministrador.html"> Inicio </a>
+            </div>
+            <div class="sub-menu">
+                <p class="sub-menu-title">Registrar</p>
+                <!-- Este submenu se desplegara cuando se haga click en registrar-->
+                <ul class="sub-menu-links">
+                    <li class="menu-link">
+                        <a href="integrantesCSTF.html" target="_blank">
+                            Integrantes de la CSTF</a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="integrantesTribunal.html" target="_blank">
+                            Integrantes del Tribunal Evaluador
+                        </a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="integrantesPTF.html" target="_blank">
+                            Integrantes de Proyecto de Trabajo Final</a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="registroDeAlumno.html" target="_blank"> Alumnos</a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="estadoyMovimientoPTF.html" target="_blank">Estados y Movimientos de un Proyecto de
+                            Trabajo Final</a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="informeyEvaluacuionPTF.html">
+                            Infome y Evaluacion de un Proyecto de Trabajo Final</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sub-menu">
+                <p class="sub-menu-title">Informes</p>
+                <ul class="sub-menu-links">
+                    <li class="menu-link">
+                        <a href="listadosPFT.html">
+                            Listados de Proyectos de Trabajo Final</a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="listadoTribunalesEvaluadores.html">
+                            Listado de Tribunales Evaluadores
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
     </header>
-    <nav>
-        <ul>
-               <li> <a href="menuUsuarioAdministrador.html"> Inicio </a> </li>
-               
-                <li> <p> Registrar:</p> </li>
-                <li> <a href="integrantesCSTF.html" target="_blank"> Integrantes de la CSTF</a> </li>
-                <li> <a href="integrantesTribunal.html"  target="_blank">  Integrantes del Tribunal Evaluador </a></li>
-                <li> <a href="integrantesPTF.html"  target="_blank"> Integrantes de Proyecto de Trabajo Final</a></li>
-                <li> <a href="registroDeAlumno.html"  target="_blank"> Alumnos</a></li>
-                <li> <a href="estadoyMovimientoPTF.html" target="_blank">Estados y Movimientos de un Proyecto de Trabajo Final</a></li>
-                <li> <a href="informeyEvaluacuionPTF.html"> Infome y Evaluacion de un Proyecto de Trabajo Final</a></li>                  
-               
-                <li><p>Informes: </p></li>  
-                <li> <a href="listadosPFT.html"> Listados de Proyectos de Trabajo Final</a></li>
-                <li> <a href="listadoTribunalesEvaluadores.html"> Listado de Tribunales Evaluadores </a></li>
-        </ul>
-    </nav>
-    <footer>
+    <main>
+        <h2>seccion principal</h2>
+    </main>
+    <footer class="footer">
         <p>Sistema de Seguimiento de Trabajos Finales</p>
     </footer>
 </body>
+
 </html>
