@@ -3,43 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/integrantes.css">
     <title>Registro Integrantes CSTF</title>
 </head>
 <body>
     <header>
-        <h1>CSTF - Registro Integrantes</h1>
+        <h1 class="titulo">CSTF - Registro Integrantes</h1>
     </header>
-    <form id="form">
-        <fieldset>
-            <legend>Datos del integrante</legend>
-            <div>
-                <label for="cuil">Cuil:</label>
-                <input type="text" id="cuil" placeholder="ej 00222222225">    
-            </div>
-            <br>
-            <div>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" placeholder="Eduardo">
-            </div>
-            <br>
-            <div>
-                <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" name="apellido" placeholder="Castro">
-            </div>
-            <br>
-            <div>
-                <label for="rol">Rol:</label>
-                <select name="rol" id="rol">
-                    <option value="presidente">Presidente</option>
-                    <option value="vocal">Vocal</option>
-                </select>
-            </div>
-            <br>
-            <button id="btn" type="submit">Registrar</button>
-        </fieldset>
-    </form>
-    <footer>
-        <p>Sistema Seguimiento de trabajos finales - UNCa</p>
+    <div class="container">
+        <form class="formulario" id="form">
+            <fieldset>
+                <legend>Datos del integrante</legend>
+                <div class="data">
+                    <label for="cuil">Cuil:</label>
+                    <input type="text" id="cuil" placeholder="ej 00222222225">    
+                </div>
+                <br>
+                <div class="data">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" placeholder="Eduardo">
+                </div>
+                <br>
+                <div class="data">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Castro">
+                </div>
+                <br>
+                <div class="data">
+                    <label for="rol">Rol:</label>
+                    <select name="rol" id="rol">
+                        <option value="presidente">Presidente</option>
+                        <option value="vocal">Vocal</option>
+                    </select>
+                </div>
+                <br>
+                <button id="btn" class="btn" type="submit">Registrar</button>
+            </fieldset>
+        </form>
+    </div>
+    <footer class="footer">
+        <p>Sistema de Seguimiento de Trabajos Finales</p>
     </footer>
 
     
