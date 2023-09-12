@@ -6,14 +6,70 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/integrantes.css">
+    <link rel="stylesheet" href="../css/estilos.css">
     <title>Registro Integrantes CSTF</title>
 </head>
 <body>
-    <header>
-        <h1 class="titulo">CSTF - Registro Integrantes</h1>
+    <header class="header">
+        <h1 class="titulo">Gestión de Trabajos Finales</h1>
+        <nav class="menu">
+            <div class="sub-menu">
+                <a class="sub-menu-title" href="menuUsuarioAdministrador.html"> Inicio </a>
+            </div>
+            <div class="sub-menu">
+                <p id="registrar" class="sub-menu-title">Registrar</p>
+                <!-- Este submenu se desplegara cuando se haga click en registrar-->
+                <ul id="menu_registrar" class="sub-menu-links">
+                    <li class="menu-link">
+                        <a href="integrantesCSTF.html" target="_self">
+                            Integrantes de la CSTF</a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="integrantesTribunal.html" target="_blank">
+                            Integrantes del Tribunal Evaluador
+                        </a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="integrantesPTF.html" target="_blank">
+                            Integrantes de Proyecto de Trabajo Final</a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="registroDeAlumno.html" target="_blank"> Alumnos</a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="estadoyMovimientoPTF.html" target="_blank">Estados y Movimientos de un Proyecto de
+                            Trabajo Final</a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="informeyEvaluacuionPTF.html">
+                            Infome y Evaluacion de un Proyecto de Trabajo Final</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sub-menu">
+                <p id="informes" class="sub-menu-title">Informes</p>
+                <!-- Este submenu se desplegara cuando se haga click en informes-->
+                <ul id="menu_informes" class="sub-menu-links">
+                    <li class="menu-link">
+                        <a href="listadosPFT.html">
+                            Listados de Proyectos de Trabajo Final</a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="listadoTribunalesEvaluadores.html">
+                            Listado de Tribunales Evaluadores
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+        <div class="menu-icon">
+            <img class="icon" src="../assets/icono-menu.svg" alt="">
+        </div>
     </header>
     <div class="container">
+        <h1 class="titulo">CSTF - Registro Integrantes</h1>
         <form class="formulario" id="form">
             <fieldset>
                 <legend>Datos del integrante</legend>
@@ -47,6 +103,7 @@
     <footer class="footer">
         <p>Sistema de Seguimiento de Trabajos Finales</p>
     </footer>
+    <script src="../js/script.js"></script>
 
     
 </body>

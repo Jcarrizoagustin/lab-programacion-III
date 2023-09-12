@@ -42,6 +42,7 @@ body {
 }
 
 .sub-menu{
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -59,8 +60,6 @@ body {
     transition: background-color .2s ease-in-out;
 }
 
-
-
 .sub-menu-title:hover {
     cursor: pointer;
     background-color: #f2f2f2;
@@ -73,6 +72,23 @@ body {
 .sub-menu-links {
     display: none;
     list-style: none;
+    position: absolute;
+    top: 5rem;
+    width: 15rem;
+    padding: 1rem;
+
+    background-color: aqua;
+}
+
+
+.show {
+    display: block;
+}
+
+.menu-link {
+    font-size: 1.2rem;
+    margin-top: .5rem;
+    border: 1px solid pink;
 }
 
 .menu-link > a {
