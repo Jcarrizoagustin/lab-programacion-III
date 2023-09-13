@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <title>Menu Administrador</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="titulo">Gestión de Trabajos Finales</h1>
+        <nav class="menu">
+            <div class="sub-menu">
+                <a class="sub-menu-title" href="menuUsuarioAdministrador.html"> Inicio </a>
+            </div>
+            <div class="sub-menu">
+                <p id="registrar" class="sub-menu-title">Registrar</p>
+                <!-- Este submenu se desplegara cuando se haga click en registrar-->
+                <ul id="menu_registrar" class="sub-menu-links">
+                    <li class="menu-link">
+                        <a href="integrantesCSTF.html">
+                            Integrantes de la CSTF</a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="integrantesTribunal.html" target="_blank">
+                            Integrantes del Tribunal Evaluador
+                        </a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="integrantesPTF.html" target="_blank">
+                            Integrantes de Proyecto de Trabajo Final</a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="registroDeAlumno.html" target="_blank"> Alumnos</a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="estadoyMovimientoPTF.html" target="_blank">Estados y Movimientos de un Proyecto de
+                            Trabajo Final</a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="informeyEvaluacuionPTF.html">
+                            Infome y Evaluacion de un Proyecto de Trabajo Final</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sub-menu">
+                <p id="informes" class="sub-menu-title">Informes</p>
+                <!-- Este submenu se desplegara cuando se haga click en informes-->
+                <ul id="menu_informes" class="sub-menu-links">
+                    <li class="menu-link">
+                        <a href="listadosPFT.html">
+                            Listados de Proyectos de Trabajo Final</a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="listadoTribunalesEvaluadores.html">
+                            Listado de Tribunales Evaluadores
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+        <div class="menu-icon">
+            <img class="icon" src="../assets/icono-menu.svg" alt="">
+        </div>
+    </header>
+    <main>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                <form class="border border-primary border-opacity-75 rounded-2 p-2">
+                    <h4>Datos PTF</h4>
+                        <div class="mb-3 col">
+                            <label for="titulo" class="col-sm-2 col-form-label">Titulo del PTF: </label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="text" id="titulo">
+                            </div>
+                            
+                        </div>
+                        <div class="mb-3 col">
+                            <label for="fecha_presentacion">Fecha de Presentacion: </label>
+                            <input class="form-control" type="date" id="fecha_presentacion">
+                        </div>
+
+                        <div class="mb-3 col">  
+                            <label class="col-sm-2 col-form-label" for="descripcion">Descripcion: </label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" name="descripcion_ptf" id="descripcion"></textarea>
+                            </div>
+                        </div>
+                        
+                        <br>
+                        <label for="archivos_adjuntos">Archivos Adjuntos: </label>
+                        <input type="file" id="archivos_adjuntos">
+                        <br>
+                    
+                </form></div>
+                <div class="col">
+                    <form  class="border border-primary border-opacity-75 rounded-2 mb-3 p-2">
+                        
+                            <legend>Datos del Alumno</legend>
+
+                            <div class="col">
+                                <label class="col-sm-2 col-form-label" for="matricula">Matricula:</label>
+                                <div class="col-sm-5">
+                                    <input class="form-control" type="number" id="matricula">
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <label for="dni">Dni:</label>
+                                <input class="form-control" type="number" id="dni">
+
+                            </div>
+                          
+                            <div class="col">
+                                <label for="nombre">Nombre:</label>
+                                <input class="form-control" type="text" id="nombre">
+
+                            </div>
+
+                            <div class="col">
+                                <label for="apellido">Apellido:</label>
+                                <input class="form-control" type="text" id="apellido">
+                            </div>
+                           
+                            <div class="col">
+                                <label for="correo">Correo:</label>
+                                <input class="form-control" type="email" id="correo">
+                            </div>
+
+                            <div class="col">
+                                <label for="alta_alumno">Fecha de Alta: </label>
+                                <input class="form-control" type="date" id="alta_alumno">
+                            </div>
+
+                            <div class="col">
+                                <label for="baja_alumno">Fecha de Baja: </label>
+                                <input class="form-control" type="date" id="baja_alumno">
+                            </div>
+                            
+                            
+                            
+                            <input type="button" class="btn btn-primary" value="Agregar">
+                            <br>
+                        
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <form  class="border border-primary border-opacity-75 rounded-2 mb-3 p-2">
+                        <fieldset>
+                            <legend>Ascesores</legend>
+            
+                            <label for="cuit_ascesor">Cuit: </label>
+                            <input type="number" id="cuit_ascesor">
+                            <br>
+                            <br>
+                            <label for="nombre_ascesor">Nombre: </label>
+                            <input type="text" id="nombre_ascesor">
+                            <br>
+                            <br>
+                            <label for="apellido_ascesor">Apellido: </label>
+                            <input type="text" id="apellido_ascesor">
+                            <br>
+                            <br>
+                            <label for="rol_ascesor">Rol: </label>
+                            <select name="roles" id="rol_ascesor">
+                                <option value="Director">Director</option>
+                                <option value="Co-Director">Co-Director</option>
+                                <option value="Ascesor">Ascesor</option>
+                            </select>
+                            <br>
+                            <br>
+                            <label for="alta_ascesor">Fecha de Alta: </label>
+                            <input type="date" id="alta_ascesor">
+                            <br>
+                            <br>
+                            <label for="baja_ascesor">Fecha de Baja: </label>
+                            <input type="date" id="baja_ascesor">
+                            <br>
+                            <br>
+                            <input type="button" class="btn btn-primary" value="Agregar">
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="col">
+                    <form  class="border border-primary border-opacity-75 rounded-2 mb-3 p-2">
+                        <fieldset>
+                            <legend> Tribunal Evaluador</legend>
+                            <label for="asignacion_tribunal">Código de Tribunal:</label>
+                            <input type="text" id="asignacion_tribunal" placeholder="Código del Tribunal">
+                            <input type="button" class="btn btn-primary" value="Asignar">
+                            <br>
+                        </fieldset>
+                        <hr>
+                        <table>
+                            <tr>
+                                <th>CUIT - DNI</th>
+                                <th>ROL</th>
+                                <th>NOMBRE</th>
+                                <th>APELLIDO</th>
+                            </tr>
+                        </table>
+                        <br>
+                        <input type="submit" class="btn btn-primary" value="Aceptar">
+                    </form>
+                </div>
+            </div>
+            
+            
+            
+            
+        </div>
+    </main>
+    <footer class="footer">
+        <p>Sistema de Seguimiento de Trabajos Finales</p>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
