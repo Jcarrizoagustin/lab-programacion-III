@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Sistema de seguimiento</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/feather/feather.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/LogoUnca.jpeg" />
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images/LogoUnca.jpeg" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/LogoUnca.jpeg" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav navbar-nav-right">
+          
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="images/faces/perfil.png" alt="perfil"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                <i class="ti-settings text-primary"></i>
+                Configuracion
+              </a>
+              <a class="dropdown-item">
+                <i class="ti-power-off text-primary"></i>
+                Cerrar Sesion
+              </a>
+            </div>
+          </li>
+          
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      
+     
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="icon-plus menu-icon"></i>
+              <span class="menu-title">Registrar</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link text-wrap" href="./alumnos.html">Alumnos</a></li>
+                <li class="nav-item"> <a class="nav-link text-wrap" href="./docentes.html">Docentes</a></li>
+                <li class="nav-item"> <a class="nav-link text-wrap" href="./comision.html">Comision de seguimiento</a></li>
+                <li class="nav-item"> <a class="nav-link text-wrap" href="#">Tribunal evaluador</a></li>
+                <li class="nav-item"> <a class="nav-link text-wrap" href="./proyectoTrabajoFinal.html">Proyecto de trabajo final</a></li>
+                <li class="nav-item"> <a class="nav-link text-wrap" href="#">Estados y Movimientos PTF</a></li>
+                <li class="nav-item"> <a class="nav-link text-wrap" href="#">Informe y Evaluacion PTF</a></li>
+                
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Informes</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="text-wrap nav-link" href="#">Listado de Proyectos de Trabajo Final</a></li>
+                <li class="nav-item"><a class="text-wrap nav-link" href="#">Listado de Tribunales Evaluadores</a></li>
+              </ul>
+            </div>
+          </li>
+          
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Ingreso de Proyecto de Trabajo Final</h4>
+                    <p class="card-description">
+                      Datos
+                    </p>
+                    <form class="forms-sample">
+                      <div class="form-group">
+                        <label for="exampleInputName1">Titulo del proyecto</label>
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Nombre">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail3">Fecha de presentacion</label>
+                        <input type="date" class="form-control" id="exampleInputEmail3">
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="exampleSelectGender">Estado</label>
+                          <select class="form-control" id="exampleSelectGender">
+                            <option>Observado</option>
+                            <option>Aprobado</option>
+                            <option>Rechazado</option>
+                          </select>
+                        </div>
+                        
+                      <div class="form-group">
+                        <label>Carga de archivo</label>
+                        <input type="file" name="img[]" class="file-upload-default">
+                        <div class="input-group col-xs-12">
+                          <input type="text" class="form-control file-upload-info" disabled placeholder="Archivo PDF">
+                          <span class="input-group-append">
+                            <button class="file-upload-browse btn btn-primary" type="button">Buscar</button>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleTextarea1">Descripcion</label>
+                        <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleTextarea1">Observacion</label>
+                        <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 justify-content-center">
+                <div class="col-md-8 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">Registro Alumnos</h4>
+                      <p class="card-description">
+                        Datos
+                      </p>
+                      <form class="forms-sample">
+                        <div class="form-group">
+                          <label for="nombre">Nombre</label>
+                          <input id="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre">
+                        </div>
+                        <div class="form-group">
+                          <label for="apellido">Apellido</label>
+                          <input id="apellido" type="text" class="form-control" id="apellido" placeholder="Apellido">
+                        </div>
+                        <div class="form-group">
+                          <label for="matricula">Matricula</label>
+                          <input id="matricula" type="text" class="form-control" id="matricula" placeholder="Matricula">
+                        </div>
+                        <div class="form-group">
+                          <label for="email">Email</label>
+                          <input id="email" type="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                        <button id="btn_enviar" type="submit" class="btn btn-primary mr-2">Registrar</button>
+                        <button class="btn btn-light">Cancelar</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="col-lg-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Alumnos ingresados</h4>
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Correo</th>
+                            <th>Accion</th>
+                          </tr>
+                        </thead>
+                        <tbody id="tabla">
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 justify-content-center">
+                <div class="col-md-8 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">Registro Asesores</h4>
+                      <p class="card-description">
+                        Datos
+                      </p>
+                      <form class="forms-sample">
+                        <div class="form-group">
+                          <label for="nombre">Nombre</label>
+                          <input id="nombreAsesor" type="text" class="form-control"  placeholder="Nombre">
+                        </div>
+                        <div class="form-group">
+                          <label for="apellido">Apellido</label>
+                          <input id="apellidoAsesor" type="text" class="form-control" placeholder="Apellido">
+                        </div>
+                        <div class="form-group">
+                          <label for="matricula">Cuit</label>
+                          <input id="cuitAsesor" type="text" class="form-control" id="matricula" placeholder="Cuit">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleSelectGender">Rol</label>
+                              <select class="form-control" id="exampleSelectGender">
+                                <option>Director</option>
+                                <option>Co-Director</option>
+                                <option>Asesor</option>
+                              </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="matricula">Fecha Alta</label>
+                                <input id="matricula" type="date" class="form-control" placeholder="Cuit">
+                              </div>
+                              <div class="form-group">
+                                <label for="matricula">Fecha Baja</label>
+                                <input id="matricula" type="date" class="form-control"  placeholder="Cuit">
+                              </div>
+                        <button id="btn_enviarAsesor" type="submit" class="btn btn-primary mr-2">Registrar</button>
+                        <button class="btn btn-light">Cancelar</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="col-lg-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Asesores ingresados</h4>
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Cuit</th>
+                            <th>Accion</th>
+                          </tr>
+                        </thead>
+                        <tbody id="tablaAsesores">
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+                <label for="codigoTribunal">Codigo tribunal</label>
+                <input id="codigoTribunal" type="text" class="form-control" placeholder="Codigo">
+              </div>
+          </div>
+          <button id="btn_enviarAsesor" type="submit" class="btn btn-primary mr-2">Registrar</button>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2023.  Trabajo de laboratorio.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Universidad Nacional de Catamarca</span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- Agregar estudiante -->
+  <script src="ingresarAlumnos.js"></script>
+  <script src="./ingresarAsesores.js"></script>
+  <!-- plugins:js -->
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="js/dataTables.select.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="js/dashboard.js"></script>
+  <script src="js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>
+
